@@ -4,29 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>solution 2 - using Hash Map</title>
+    <title>two sum - Leet code q 1</title>
   </head>
   <body>
-    <h1>Hello All, this is solution 2 - using Hash Map</h1>
+    <h1>Hello All</h1>
     <script>
-      /**
-       * @param {number[]} nums
-       * @param {number} target
-       * @return {number[]}
-       */
-      var twoSum = function (nums, target) {
+      const twoSum = (numsArray, target) => {
         let map = new Map();
-        for (let i = 0; i < nums.length; i++) {
-          let num1 = nums[i];
+
+        for (let i = 0; i < numsArray.length; i++) {
+          let num1 = numsArray[i];
           let num2 = target - num1;
+
           if (map.has(num2)) {
             return [map.get(num2), i];
           }
+
           map.set(num1, i);
         }
       };
-      console.log(twoSum([2, 3, 1, 5, 4], 4));
-      console.log("[2, 3, 1, 5, 4], 4");
+      console.log(twoSum([2, 3, 4, 8], 5));
+      console.log("[2, 3, 4, 8], 5");
     </script>
   </body>
 </html>
